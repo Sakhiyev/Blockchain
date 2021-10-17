@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Наши товары</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1 class="Sakhiyev">Все наши товары</h1>
+
+    {% for el in articles %}
+    <div class="card mb-4 box-shadow">
+        <div class="card-body">
+    <div class="Sakhiyev">
+        <h2>{{el.title}}</h2>
+        <img src="{{el.isActive}}">
+        <p>{{el.price}} Тенге</p>
+         <p class="black">В наличии</p>
+         <a href="/products/{{ el.id }}" class="btn btn-lg btn-block btn-primary">Купить сейчас</a><br>
+</div>
+        </div>
+    </div>
+    {% endfor %}
+
+{% endblock %}

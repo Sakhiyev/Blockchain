@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>{{ article.title }}</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1 class="Sakhiyev">{{ article.title }}</h1>
+
+    <div class="Sakhiyev">
+        <h2>{{ article.price }} Тенге</h2>
+         <p class="black">В наличии</p>
+         <img src="{{ article.isActive }}">
+        <a href="/buy2/{{ article.id }}" class="btn btn-lg btn-block btn-primary">Купить товар</a>
+        <h3 class="black">Электронные сигареты</h3>
+        <p class="black">Один из главных разделов интернет-магазина CIGA - это электронные сигареты в Казахстане. Представлены сотни моделей от бюджетного до премиум-сегмента. Представлены как отдельные устройства, так и готовые наборы, которыми можно пользоваться прямо из коробки. В ассортименте есть популярные электронные сигареты таких известных брендов, как Eleaf, IJOY, JustFog, Suorin и многие другие. На все эти товары распространяется гарантия.</p>
+</div>
+
+{% endblock %}
